@@ -16,6 +16,18 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".EasyPanda"
+            android:label="@string/title_activity_easy_panda" >
+        </activity>
+        <activity
+            android:name=".MediumPanda"
+            android:label="@string/title_activity_medium_panda" >
+        </activity>
+        <activity
+            android:name=".HardPanda"
+            android:label="@string/title_activity_hard_panda" >
+        </activity>
     </application>
 
 </manifest>

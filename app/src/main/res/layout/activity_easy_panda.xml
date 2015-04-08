@@ -1,0 +1,25 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="960dp"
+    android:layout_height="720dp"
+    tools:context=".MainActivity"
+    android:clipChildren="false"
+    android:clickable="true">
+
+    <ImageView
+        android:layout_width="960dp"
+        android:layout_height="720dp"
+        android:id="@+id/mainImage"
+        android:src="@drawable/easy_panda"
+        android:isScrollContainer="true"
+        android:nestedScrollingEnabled="true"
+        android:clickable="true" />
+
+    <TextView android:text="Hello!"
+        android:layout_width="36dp"
+        android:layout_height="31dp"
+        android:layout_marginLeft="725dp"
+        android:layout_marginTop="325dp"
+        android:id="@+id/foundPanda" />
+
+</RelativeLayout>
