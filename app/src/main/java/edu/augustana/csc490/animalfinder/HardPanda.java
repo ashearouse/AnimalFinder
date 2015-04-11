@@ -1,23 +1,23 @@
 package edu.augustana.csc490.animalfinder;
 
-import android.app.Activity;
+
+import android.content.Intent;
 import android.os.SystemClock;
 import android.support.v4.view.MotionEventCompat;
 import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
 import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.MotionEvent;
 import android.view.View;
-import android.view.Window;
-import android.view.WindowManager;
 import android.widget.Chronometer;
 import android.widget.ImageView;
 import android.widget.Toast;
 
 
-public class HardPanda extends Activity {
+public class HardPanda extends ActionBarActivity {
     ImageView mainImage;
     int trackX = 0;
     int trackY = 0;
@@ -86,8 +86,6 @@ public class HardPanda extends Activity {
         y1 = (int) event.getY();
         DisplayMetrics metrics2 = getResources().getDisplayMetrics();
         density = metrics2.densityDpi;
-        //Toast toast = Toast.makeText(getApplicationContext(), "x: " + (x1 + trackX) + " y: " + (y1 + trackY),Toast.LENGTH_SHORT);
-        //toast.show();
         if((trackX + x1) / (density / 160) >= 219 && (trackX + x1) / (density / 160) <= 235 && (trackY + y1) / (density / 160) >= 542 && (trackY + y1) / (density / 160) <= 553){
             clock.stop();
             long time = getTime();
@@ -104,6 +102,17 @@ public class HardPanda extends Activity {
     private void showWin(long time){
         Toast toast2 = Toast.makeText(getApplicationContext(), "You won in " + time + " seconds!", Toast.LENGTH_SHORT);
         toast2.show();
+        mainMenu();
+    }
+
+    private void mainMenu(){
+        Intent menuIntent = new Intent(getBaseContext(), MainActivity.class);
+        startActivity(menuIntent);
+    }
+
+    private void restartClock(){
+        Intent hardIntent = new Intent(getBaseContext(), HardPanda.class);
+        startActivity(hardIntent);
     }
 
 
@@ -120,12 +129,18 @@ public class HardPanda extends Activity {
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
+        switch(id){
+            case R.id.restart_clock:
+                restartClock();
+                return true;
+            case R.id.main_menu:
+                mainMenu();
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
         }
 
-        return super.onOptionsItemSelected(item);
+        //noinspection SimplifiableIfStatement
+
     }
 }

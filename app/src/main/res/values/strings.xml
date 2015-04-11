@@ -12,4 +12,6 @@
     <string name="medium">Medium</string>
     <string name="hardButton">Hard</string>
     <string name="game_goal">The goal is simple: find the hidden panda and click on it to win!</string>
+    <string name="restart_clock">Restart Clock</string>
+    <string name="main_menu">Back to the main menu</string>
 </resources>

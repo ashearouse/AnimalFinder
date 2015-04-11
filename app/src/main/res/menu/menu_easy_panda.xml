@@ -4,4 +4,9 @@
     tools:context="edu.augustana.csc490.animalfinder.EasyPanda">
     <item android:id="@+id/action_settings" android:title="@string/action_settings"
         android:orderInCategory="100" app:showAsAction="never" />
+    <item android:id="@+id/restart_clock"
+        android:title="@string/restart_clock"></item>
+    <item android:id="@+id/main_menu"
+        android:title="@string/main_menu"></item>
+
 </menu>
