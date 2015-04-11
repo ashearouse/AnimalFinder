@@ -8,6 +8,13 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 
+//acknowledgements
+/*
+Thanks to Brittney Cox of the EDGE Center for the fox, firefly, and panda graphics
+The deer graphics were modified by myself, but the original file came from the
+Augustana Web Guild's Art Explosion clipart collection
+ */
+
 
 public class MainActivity extends ActionBarActivity {
 

@@ -16,6 +16,13 @@ import android.widget.Chronometer;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+//acknowledgements
+/*
+Thanks to Brittney Cox of the EDGE Center for the fox, firefly, and panda graphics
+The deer graphics were modified by myself, but the original file came from the
+Augustana Web Guild's Art Explosion clipart collection
+ */
+
 
 public class MediumPanda extends ActionBarActivity {
     ImageView mainImage;
@@ -121,14 +128,6 @@ public class MediumPanda extends ActionBarActivity {
         Intent mediumIntent = new Intent(getBaseContext(), MediumPanda.class);
         startActivity(mediumIntent);
     }
-
-    private View.OnDragListener imageDragListener = new View.OnDragListener() {
-        @Override
-        public boolean onDrag(View v, DragEvent event) {
-            mainImage.scrollBy(20,20);
-            return true;
-        }
-    };
 
 
     @Override

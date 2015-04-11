@@ -15,6 +15,13 @@ import android.widget.Chronometer;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+//acknowledgements
+/*
+Thanks to Brittney Cox of the EDGE Center for the fox, firefly, and panda graphics
+The deer graphics were modified by myself, but the original file came from the
+Augustana Web Guild's Art Explosion clipart collection
+ */
+
 
 public class EasyPanda extends ActionBarActivity {
     ImageView mainImage;
