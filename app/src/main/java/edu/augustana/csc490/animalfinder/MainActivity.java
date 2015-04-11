@@ -1,17 +1,54 @@
 package edu.augustana.csc490.animalfinder;
 
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 
 
 public class MainActivity extends ActionBarActivity {
+
+    Button easy;
+    Button medium;
+    Button hard;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        easy = (Button) findViewById(R.id.easyButton);
+        medium = (Button) findViewById(R.id.mediumButton);
+        hard = (Button) findViewById(R.id.hardButton);
+        setListeners();
+    }
+
+    private void setListeners() {
+        easy.setOnClickListener(new View.OnClickListener(){
+           @Override
+           public void onClick(View v){
+               Intent easyIntent = new Intent(getBaseContext(), EasyPanda.class);
+               startActivity(easyIntent);
+           }
+        });
+
+        medium.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                Intent mediumIntent = new Intent(getBaseContext(), MediumPanda.class);
+                startActivity(mediumIntent);
+            }
+        });
+
+        hard.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                Intent hardIntent = new Intent(getBaseContext(), HardPanda.class);
+                startActivity(hardIntent);
+            }
+        });
     }
 
 

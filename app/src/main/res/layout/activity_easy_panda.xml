@@ -2,7 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="960dp"
     android:layout_height="720dp"
-    tools:context=".MainActivity"
+    tools:context=".EasyPanda"
     android:clipChildren="false"
     android:clickable="true">
 
@@ -11,15 +11,11 @@
         android:layout_height="720dp"
         android:id="@+id/mainImage"
         android:src="@drawable/easy_panda"
-        android:isScrollContainer="true"
-        android:nestedScrollingEnabled="true"
         android:clickable="true" />
 
-    <TextView android:text="Hello!"
-        android:layout_width="36dp"
-        android:layout_height="31dp"
-        android:layout_marginLeft="725dp"
-        android:layout_marginTop="325dp"
-        android:id="@+id/foundPanda" />
+    <Chronometer
+        android:id="@+id/chronometer1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
 
 </RelativeLayout>

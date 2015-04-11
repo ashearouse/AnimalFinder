@@ -6,4 +6,10 @@
     <string name="title_activity_easy_panda">EasyPanda</string>
     <string name="title_activity_medium_panda">MediumPanda</string>
     <string name="title_activity_hard_panda">HardPanda</string>
+    <string name="title">Welcome to Panda Finder!</string>
+    <string name="choose_level">Choose a Level:</string>
+    <string name="easy">Easy</string>
+    <string name="medium">Medium</string>
+    <string name="hardButton">Hard</string>
+    <string name="game_goal">The goal is simple: find the hidden panda and click on it to win!</string>
 </resources>
